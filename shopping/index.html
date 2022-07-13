@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>shopping app</title>
+    <link rel="stylesheet" href="/Users/tcsmobility/Desktop/trinwo office/shopping/style.css">
+     <script src="/Users/tcsmobility/Desktop/trinwo office/shopping/cart.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+      </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-Black">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://www.logolynx.com/images/logolynx/ef/ef540793d81237ad500bef0bbb515920.jpeg"
+            class="logo"
+     />       𝖘𝖍𝖔𝖕 𝖊 𝖈𝖆𝖗𝖙
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-link active" id="navItem1" href="#">
+
+              <span class="sr-only">(current)</span>
+            </a>
+            <li class="nav-item dropdown">
+           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            categories
+           </a>
+           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+             <li><a class="dropdown-item" href="/Users/tcsmobility/Desktop/trinwo office/shopping/dress.html">Dress</a></li>
+             <li><a class="dropdown-item" href="/Users/tcsmobility/Desktop/trinwo office/shopping/mobiles.html">mobiles</a></li>
+             <li><a class="dropdown-item" href="/Users/tcsmobility/Desktop/trinwo office/shopping/slippers.html">slippers</a></li>
+             <li><a class="dropdown-item" href="/Users/tcsmobility/Desktop/trinwo office/shopping/jewellery.html">Jewellery</a></li>
+              <li><a class="dropdown-item" href="/Users/tcsmobility/Desktop/trinwo office/shopping/kitchen.html">kitchen</a></li>
+           </ul>
+         </li>
+            <a class="nav-link" href="/Users/tcsmobility/Desktop/trinwo office/shopping/login.html" id="navItem4">exit</a>
+            <nav class="navbar navbar-inverse bg-inverse fixed-top bg-faded">
+            <button type="button" class="btn btn-light" data-toggle="modal" data-target="#cart"> 🛒(<span class="total-count"></span>)&nbsp;</button><button onclick="clearCart()" class="clear-cart btn btn-light">Clear Cart</button></div>
+            </nav>
+          </div>
+        </div>
+      </div>
+      </nav>
+    <div class="banner-section-bg-container d-flex justify-content-center flex-column">
+      <div class="text-center">
+        <h1 class="banner-heading ">Get AnyItem At Anytime</h1>
+        <p class="banner-caption ">Happy Shopping</p>
+      </div>
+    </div>
+    <!--jewellery section-->
+    <div class="jewellery-bottom-section">
+  <div class="d-flex flex-row justify-content-center">
+    <div class="jewellery-card-item">
+      <img
+      src="/Users/tcsmobility/Desktop/trinwo office/shopping/jewellery/jewellery 3.jpeg"
+        class="jewellery-card-image"
+      />
+      <h1 class="jewellery-card-name">kanakams</h1>
+      <p class="jewellery-card-price">Rs 62000/-</p>
+      <a class="add-to-cart btn btn-light" id="Kanak" onclick="Add('#Kanak')" data-name="kanakams" data-price="62000">Add-Cart</a>
+    </div>
+
+    <div class="jewellery-card-item">
+      <img
+        src="/Users/tcsmobility/Desktop/trinwo office/shopping/jewellery/jewellery 1.jpeg"
+        class="jewellery-card-image"
+      />
+      <h1 class="jewellery-card-name"> Neck set</h1>
+      <p class="jewellery-card-price">Rs 85000/-</p>
+      <a class="add-to-cart btn btn-light" id="NS" onclick="Add('#NS')" data-name="Neck Set" data-price="85000">Add-Cart</a>
+      </div>
+
+    <div class="jewellery-card-item">
+      <img
+        src="/Users/tcsmobility/Desktop/trinwo office/shopping/jewellery/jewellery 2.jpeg"
+        class="jewellery-card-image"
+      />
+      <h1 class="jewellery-card-name">Nacklace</h1>
+      <p class="jewellery-card-price">Rs 85000/-</p>
+      <a class="add-to-cart btn btn-light" id="NL" onclick="Add('#NL')" data-name="Necklace" data-price="85000">Add-Cart</a>
+    </div>
+
+    <div class="jewellery-card-item">
+      <img
+      src="/Users/tcsmobility/Desktop/trinwo office/shopping/jewellery/jewellery 4.jpeg"
+        class="jewellery-card-image"
+      />
+      <h1 class="jewellery-card-name">chocker</h1>
+      <p class="jewellery-card-price">Rs 99999/-</p>
+<a class="add-to-cart btn btn-light" id="CH" onclick="Add('#CH')" data-name="Chocker" data-price="99999">Add-Cart</a>
+  </div>
+
+    <div class="jewellery-card-item">
+      <img
+      src="/Users/tcsmobility/Desktop/trinwo office/shopping/jewellery/jewellery 5.jpeg"
+        class="jewellery-card-image"
+      />
+      <h1 class="jewellery-card-name">Necklace set </h1>
+      <p class="jewellery-card-price">Rs 5000/-</p>
+        <a class="add-to-cart btn btn-light" id="NS" onclick="Add('#NS')" data-name="Necklace set" data-price="5000">Add-Cart</a>
+    </div>
+  </div>
+
+  <div class="d-flex flex-row justify-content-center">
+    <div class="jewellery-card-item">
+      <img
+      src="/Users/tcsmobility/Desktop/trinwo office/shopping/jewellery/jewellery 6.png"
+        class="jewellery-card-image"
+      />
+      <h1 class="jewellery-card-name">Gold Rings</h1>
+      <p class="jewellery-card-price">Rs 30000/-</p>
+        <a class="add-to-cart btn btn-light" id="GR" onclick="Add('#GR')" data-name="Gold Rings" data-price="30000">Add-Cart</a>
+    </div>
+
+    <div class="jewellery-card-item">
+      <img
+      src="/Users/tcsmobility/Desktop/trinwo office/shopping/jewellery/jewellery 7.jpeg"
+        class="jewellery-card-image"
+      />
+      <h1 class="jewellery-card-name">platinum rings</h1>
+      <p class="jewellery-card-price">Rs 40000/-</p>
+        <a class="add-to-cart btn btn-light" id="PR" onclick="Add('#PR')" data-name="Platinum Rings" data-price="40000">Add-Cart</a>
+    </div>
+
+    <div class="jewellery-card-item">
+      <img
+      src="/Users/tcsmobility/Desktop/trinwo office/shopping/jewellery/jewellery 8.jpeg"
+        class="jewellery-card-image"
+      />
+      <h1 class="jewellery-card-name">Diamond ring </h1>
+      <p class="jewellery-card-price">Rs 64999/-</p>
+        <a class="add-to-cart btn btn-light" id="DR" onclick="Add('#DR')" data-name="Diamond Rings" data-price="64999">Add-Cart</a>
+    </div>
+
+    <div class="jewellery-card-item">
+      <img
+      src="/Users/tcsmobility/Desktop/trinwo office/shopping/jewellery/jewellery 9.jpeg"
+        class="jewellery-card-image"
+      />
+      <h1 class="jewellery-card-name">couple rings</h1>
+      <p class="jewellery-card-price">Rs 40000/-</p>
+      <a class="add-to-cart btn btn-light" id="CR" onclick="Add('#CR')" data-name="couple Rings" data-price="40000">Add-Cart</a>
+    </div>
+
+    <div class="jewellery-card-item">
+      <img
+      src="/Users/tcsmobility/Desktop/trinwo office/shopping/jewellery/jewellery 10.jpeg"
+        class="jewellery-card-image"
+      />
+      <h1 class="jewellery-card-name">chocker</h1>
+      <p class="jewellery-card-price">Rs 75000/-</p>
+      <a class="add-to-cart btn btn-light" id="C" onclick="Add('#C')" data-name="chocker" data-price="75000">Add-Cart</a>
+    </div>
+  </div>
+</div>
+<!--Kitchen section-->
+<div class="Kitchen-bottom-section">
+    <div class="d-flex flex-row justify-content-center">
+      <div class="Kitchen-card-item" id="item1">
+        <img
+          src="/Users/tcsmobility/Desktop/trinwo office/shopping/kitchen/kt 1.jpeg"
+          class="Kitchen-card-image"
+        />
+        <h1 class="Kitchen-card-name">polished stainless steel</h1>
+        <p class="Kitchen-card-price">Rs 1500/-</p>
+        <a class="add-to-cart btn btn-light" id="PSS" onclick="Add('#PSS')" data-name="polished stainless steel" data-price="1500">Add-Cart</a>
+      </div>
+
+      <div class="Kitchen-card-item" id="item2">
+        <img
+        src="/Users/tcsmobility/Desktop/trinwo office/shopping/kitchen/kt2.jpeg"
+          class="Kitchen-card-image"
+        />
+        <h1 class="Kitchen-card-name">stand</h1>
+        <p class="Kitchen-card-price">Rs 1250/-</p>
+        <a class="add-to-cart btn btn-light" id="S" onclick="Add('#S')" data-name="stand" data-price="1250">Add-Cart</a>
+      </div>
+
+      <div class="Kitchen-card-item" id="item3">
+        <img
+        src="/Users/tcsmobility/Desktop/trinwo office/shopping/kitchen/kt3.jpeg"
+          class="Kitchen-card-image"
+        />
+        <h1 class="Kitchen-card-name">Home Set</h1>
+        <p class="Kitchen-card-price">Rs 2999/-</p>
+          <a class="add-to-cart btn btn-light" id="HS" onclick="Add('#HS')" data-name="Home Set" data-price="2999">Add-Cart</a>
+      </div>
+
+        <div class="Kitchen-card-item" id="item4">
+            <img
+            src="/Users/tcsmobility/Desktop/trinwo office/shopping/kitchen/kt4.jpeg"
+          class="Kitchen-card-image"
+        />
+        <h1 class="Kitchen-card-name">New box</h1>
+        <p class="Kitchen-card-price">Rs 2500/-</p>
+          <a class="add-to-cart btn btn-light" id="NB" onclick="Add('#NB')" data-name="New box" data-price="2500">Add-Cart</a>
+      </div>
+
+       <div class="Kitchen-card-item" id="item5">
+       <img
+       src="/Users/tcsmobility/Desktop/trinwo office/shopping/kitchen/kt5.jpeg"
+          class="Kitchen-card-image"
+        />
+        <h1 class="Kitchen-card-name">Knife set </h1>
+        <p class="Kitchen-card-price">Rs 799/-</p>
+          <a class="add-to-cart btn btn-light" id="KS" onclick="Add('#KS')" data-name="Knife Set" data-price="799">Add-Cart</a>
+      </div>
+    </div>
+
+    <div class="d-flex flex-row justify-content-center">
+      <div class="Kitchen-card-item" id="item6">
+        <img
+        src="/Users/tcsmobility/Desktop/trinwo office/shopping/kitchen/kt6.jpeg"
+          class="Kitchen-card-image"
+        />
+        <h1 class="Kitchen-card-name">Dinner set</h1>
+        <p class="Kitchen-card-price">Rs 3999/-</p>
+          <a class="add-to-cart btn btn-light" id="DS" onclick="Add('#DS')" data-name="Dinner set" data-price="3999">Add-Cart</a>
+      </div>
+
+      <div class="Kitchen-card-item" id="item7">
+        <img
+        src="/Users/tcsmobility/Desktop/trinwo office/shopping/kitchen/kt7.jpeg"
+          class="Kitchen-card-image"
+        />
+        <h1 class="Kitchen-card-name"> stainless steelbowl</h1>
+        <p class="Kitchen-card-price">Rs 850/-</p>
+          <a class="add-to-cart btn btn-light" id="SS" onclick="Add('#SS')" data-name="stainless steelbowl" data-price="850">Add-Cart</a>
+      </div>
+
+      <div class="Kitchen-card-item" id="item8">
+        <img
+        src="/Users/tcsmobility/Desktop/trinwo office/shopping/kitchen/kt8.jpeg"
+          class="Kitchen-card-image"
+        />
+        <h1 class="Kitchen-card-name">Gold coated pan </h1>
+        <p class="Kitchen-card-price">Rs 1750/-</p>
+        <a class="add-to-cart btn btn-light" id="GCP" onclick="Add('#GCP')" data-name="Gold coated pan" data-price="1750">Add-Cart</a>
+      </div>
+
+      <div class="Kitchen-card-item" id="item9">
+        <img
+        src="/Users/tcsmobility/Desktop/trinwo office/shopping/kitchen/kt9.jpeg"
+          class="Kitchen-card-image"
+        />
+        <h1 class="Kitchen-card-name">sauce</h1>
+        <p class="Kitchen-card-price">Rs 650/-</p>
+        <a class="add-to-cart btn btn-light" id="S" onclick="Add('#S')" data-name="sauce" data-price="650">Add-Cart</a>
+      </div>
+
+        <div class="Kitchen-card-item" id="item10">
+        <img
+        src="/Users/tcsmobility/Desktop/trinwo office/shopping/kitchen/kt10.jpeg"
+          class="Kitchen-card-image"
+        />
+        <h1 class="Kitchen-card-name">kettle</h1>
+        <p class="Kitchen-card-price">Rs 1250/-</p>
+          <a class="add-to-cart btn btn-light" id="K" onclick="Add('#K')" data-name="kettle" data-price="1250">Add-Cart</a>
+      </div>
+    </div>
+  </div>
+<!--mobile section-->
+<div class="mobile-bottom-section">
+     <div class="d-flex flex-row justify-content-center">
+       <div class="mobile-card-item">
+         <img
+           src="/Users/tcsmobility/Desktop/trinwo office/shopping/mobileimages/ph1.jpeg"
+           class="mobile-card-image"
+         />
+         <h1 class="mobile-card-name">i phone 13pro Max</h1>
+         <p class="mobile-card-price">Rs 1,25,000/-</p>
+    <a class="add-to-cart btn btn-light" id="IPPM" onclick="Add('#IPPM')" data-name="i phone13pro Max" data-price="1,25,000">Add-Cart</a>
+       </div>
+
+       <div class="mobile-card-item">
+         <img
+         src="/Users/tcsmobility/Desktop/trinwo office/shopping/mobileimages/ph2.jpeg"
+           class="mobile-card-image"
+         />
+         <h1 class="mobile-card-name"> galaxy s22 ultra</h1>
+         <p class="mobile-card-price">Rs 85,000/-</p>
+           <a class="add-to-cart btn btn-light" id="GSU" onclick="Add('#GSU')" data-name="GALAXY s22 ultra" data-price="85,000">Add-Cart</a>
+       </div>
+
+       <div class="mobile-card-item">
+         <img
+         src="/Users/tcsmobility/Desktop/trinwo office/shopping/mobileimages/ph3.jpeg"
+           class="mobile-card-image"
+         />
+         <h1 class="mobile-card-name">vivo v21</h1>
+         <p class="mobile-card-price">Rs 30,000/-</p>
+        <a class="add-to-cart btn btn-light" id="VV21" onclick="Add('#VV21')" data-name="vivo v21" data-price="30,000">Add-Cart</a>
+       </div>
+
+       <div class="mobile-card-item">
+         <img
+         src="/Users/tcsmobility/Desktop/trinwo office/shopping/mobileimages/ph4.jpeg"
+           class="mobile-card-image"
+         />
+         <h1 class="mobile-card-name">Realme x12</h1>
+         <p class="mobile-card-price">Rs 9,999/-</p>
+           <a class="add-to-cart btn btn-light" id="RX12" onclick="Add('#RX12')" data-name="Realme x12" data-price="9,999">Add-Cart</a>
+       </div>
+
+       <div class="mobile-card-item">
+         <img
+         src="/Users/tcsmobility/Desktop/trinwo office/shopping/mobileimages/ph5.jpeg"
+           class="mobile-card-image"
+         />
+         <h1 class="mobile-card-name">oneplus 10 pro </h1>
+         <p class="mobile-card-price">Rs 80,000/-</p>
+           <a class="add-to-cart btn btn-light" id="O10P" onclick="Add('#O10P')" data-name="oneplus 10pro" data-price="80,000">Add-Cart</a>
+       </div>
+     </div>
+
+     <div class="d-flex flex-row justify-content-center">
+       <div class="mobile-card-item">
+         <img
+         src="/Users/tcsmobility/Desktop/trinwo office/shopping/mobileimages/ph6.jpeg"
+           class="mobile-card-image"
+         />
+         <h1 class="mobile-card-name">iqoo z6</h1>
+         <p class="mobile-card-price">Rs 27,999/-</p>
+      <a class="add-to-cart btn btn-light" id="IZ6" onclick="Add('#IZ6')" data-name="iqoo z6" data-price="27,999">Add-Cart</a>
+       </div>
+
+       <div class="mobile-card-item">
+         <img
+         src="/Users/tcsmobility/Desktop/trinwo office/shopping/mobileimages/ph7.jpeg"
+           class="mobile-card-image"
+         />
+         <h1 class="mobile-card-name">Nokia z1</h1>
+         <p class="mobile-card-price">Rs 18,000/-</p>
+           <a class="add-to-cart btn btn-light" id="NZ1" onclick="Add('#NZ1')" data-name="Nokia z1" data-price="18,000">Add-Cart</a>
+       </div>
+
+       <div class="mobile-card-item">
+         <img
+         src="/Users/tcsmobility/Desktop/trinwo office/shopping/mobileimages/ph8.jpeg"
+           class="mobile-card-image"
+         />
+         <h1 class="mobile-card-name">gionee </h1>
+         <p class="mobile-card-price">Rs 22,000/-</p>
+           <a class="add-to-cart btn btn-light" id="G" onclick="Add('#G')" data-name="gionee" data-price="22,000">Add-Cart</a>
+       </div>
+
+       <div class="mobile-card-item">
+         <img
+         src="/Users/tcsmobility/Desktop/trinwo office/shopping/mobileimages/ph9.jpeg"
+           class="mobile-card-image"
+         />
+         <h1 class="mobile-card-name">oppo</h1>
+         <p class="mobile-card-price">Rs 7,500/-</p>
+          <a class="add-to-cart btn btn-light" id="O" onclick="Add('#O')" data-name="oppo" data-price="7,500">Add-Cart</a>
+       </div>
+
+       <div class="mobile-card-item">
+         <img
+         src="/Users/tcsmobility/Desktop/trinwo office/shopping/mobileimages/ph10.jpeg"
+           class="mobile-card-image"
+         />
+         <h1 class="mobile-card-name">redmi 12</h1>
+         <p class="mobile-card-price">Rs 35,000/-</p>
+           <a class="add-to-cart btn btn-light" id="R12" onclick="Add('#R12')" data-name="redmi 12" data-price="35,000">Add-Cart</a>
+       </div>
+     </div>
+   </div>
+   <!-- dress section-->
+   <div class="Dress-bottom-section">
+     <div class="d-flex flex-row justify-content-center">
+       <div class="Dress-card-item">
+         <img
+           src="/Users/tcsmobility/Desktop/trinwo office/shopping/dressimages/dd 1.jpeg"
+           class="Dress-card-image"
+         />
+         <h1 class="Dress-card-name">Frock</h1>
+         <p class="Dress-card-price">Rs 3000/-</p>
+           <a class="add-to-cart btn btn-light" id="F" onclick="Add('#F')" data-name="Frock" data-price="3000">Add-Cart</a>
+       </div>
+
+       <div class="Dress-card-item">
+         <img
+         src="/Users/tcsmobility/Desktop/trinwo office/shopping/dressimages/dd 2.jpeg"
+           class="Dress-card-image"
+         />
+         <h1 class="Dress-card-name"> Long frock</h1>
+         <p class="Dress-card-price">Rs 10000/-</p>
+           <a class="add-to-cart btn btn-light" id="LF" onclick="Add('#LF')" data-name="Long frock" data-price="10000">Add-Cart</a>
+       </div>
+
+       <div class="Dress-card-item">
+         <img
+         src="/Users/tcsmobility/Desktop/trinwo office/shopping/dressimages/dd3.jpeg"
+           class="Dress-card-image"
+         />
+         <h1 class="Dress-card-name">Denim hoodies</h1>
+         <p class="Dress-card-price">Rs 1500/-</p>
+          <a class="add-to-cart btn btn-light" id="DH" onclick="Add('#DH')" data-name="Denim hoodies" data-price="1500">Add-Cart</a>
+       </div>
+
+       <div class="Dress-card-item">
+         <img
+         src="/Users/tcsmobility/Desktop/trinwo office/shopping/dressimages/dd4.jpeg"
+           class="Dress-card-image"
+         />
+         <h1 class="Dress-card-name">Red formal shirt</h1>
+         <p class="Dress-card-price">Rs 1560/-</p>
+           <a class="add-to-cart btn btn-light" id="RFS" onclick="Add('#RFS')" data-name="Red formal shirt" data-price="1560">Add-Cart</a>
+       </div>
+
+       <div class="Dress-card-item">
+         <img
+         src="/Users/tcsmobility/Desktop/trinwo office/shopping/dressimages/dd5.jpeg"
+           class="Dress-card-image"
+         />
+         <h1 class="Dress-card-name">Green blazer</h1>
+         <p class="Dress-card-price">Rs 5000/-</p>
+           <a class="add-to-cart btn btn-light" id="GB" onclick="Add('#GB')" data-name="Green Blazer" data-price="5000">Add-Cart</a>
+       </div>
+     </div>
+
+     <div class="d-flex flex-row justify-content-center">
+       <div class="Dress-card-item">
+         <img
+         src="/Users/tcsmobility/Desktop/trinwo office/shopping/dressimages/dd6.jpeg"
+           class="Dress-card-image"
+         />
+         <h1 class="Dress-card-name">suit</h1>
+         <p class="Dress-card-price">Rs 3000/-</p>
+           <a class="add-to-cart btn btn-light" id="S1" onclick="Add('#S1')" data-name="suit" data-price="3000">Add-Cart</a>
+       </div>
+
+       <div class="Dress-card-item">
+         <img
+         src="/Users/tcsmobility/Desktop/trinwo office/shopping/dressimages/dd7.jpeg"
+           class="Dress-card-image"
+         />
+         <h1 class="Dress-card-name">Traditinal Dress </h1>
+         <p class="Dress-card-price">Rs 5000/-</p>
+        <a class="add-to-cart btn btn-light" id="TD" onclick="Add('#TD')" data-name="Traditinal Dress" data-price="5000">Add-Cart</a>
+       </div>
+
+       <div class="Dress-card-item">
+         <img
+         src="/Users/tcsmobility/Desktop/trinwo office/shopping/dressimages/dd8.jpeg"
+           class="Dress-card-image"
+         />
+         <h1 class="Dress-card-name">Black Blazer</h1>
+         <p class="Dress-card-price">Rs 1999/-</p>
+          <a class="add-to-cart btn btn-light" id="BB" onclick="Add('#BB')" data-name="Black Blazer" data-price="1999">Add-Cart</a>
+       </div>
+
+       <div class="Dress-card-item">
+         <img
+         src="/Users/tcsmobility/Desktop/trinwo office/shopping/dressimages/dd9.jpeg"
+           class="Dress-card-image"
+         />
+         <h1 class="Dress-card-name">Relax T-shirt</h1>
+         <p class="Dress-card-price">Rs 999/-</p>
+           <a class="add-to-cart btn btn-light" id="RTS" onclick="Add('#RTS')" data-name="Relax T-shirt" data-price="999">Add-Cart</a>
+       </div>
+
+       <div class="Dress-card-item">
+         <img
+         src="/Users/tcsmobility/Desktop/trinwo office/shopping/dressimages/dd10.jpeg"
+           class="Dress-card-image"
+         />
+         <h1 class="Dress-card-name">Full hands t-shirts</h1>
+         <p class="Dress-card-price">Rs 750/-</p>
+           <a class="add-to-cart btn btn-light" id="FHTS" onclick="Add('#FHTS')" data-name="Full hands T-shirt" data-price="750">Add-Cart</a>
+       </div>
+     </div>
+   </div>
+   <!--slippers section-->
+   <div class=" slippers-bottom-section">
+      <div class="d-flex flex-row justify-content-center">
+        <div class="slippers-card-item">
+          <img
+            src="/Users/tcsmobility/Desktop/trinwo office/shopping/slippersimages/ss1.jpeg"
+            class="slippers-card-image"
+          />
+          <h1 class="slippers-card-name">Flip-flops</h1>
+          <p class="slippers-card-price">Rs 175/-</p>
+            <a class="add-to-cart btn btn-light" id="FF" onclick="Add('#FF')" data-name="Flip-flops" data-price="175">Add-Cart</a>
+        </div>
+
+        <div class="slippers-card-item">
+          <img
+          src="/Users/tcsmobility/Desktop/trinwo office/shopping/slippersimages/ss2.jpeg"
+            class="slippers-card-image"
+          />
+          <h1 class="slippers-card-name">Wool slippers</h1>
+          <p class="slippers-card-price">Rs 1500/-</p>
+            <a class="add-to-cart btn btn-light" id="WS" onclick="Add('#WS')" data-name="Wool Slippers" data-price="1500">Add-Cart</a>
+        </div>
+
+        <div class="slippers-card-item">
+          <img
+          src="/Users/tcsmobility/Desktop/trinwo office/shopping/slippersimages/ss3.jpeg"
+            class="slippers-card-image"
+          />
+          <h1 class="slippers-card-name">Flite slippers</h1>
+          <p class="slippers-card-price">Rs 300/-</p>
+          <a class="add-to-cart btn btn-light" id="FS" onclick="Add('#FS')" data-name="flite slippers" data-price="300">Add-Cart</a>
+        </div>
+
+        <div class="slippers-card-item">
+          <img
+          src="/Users/tcsmobility/Desktop/trinwo office/shopping/slippersimages/ss4.jpeg"
+            class="slippers-card-image"
+          />
+          <h1 class="slippers-card-name">flat slippers</h1>
+          <p class="slippers-card-price">Rs 299/-</p>
+          <a class="add-to-cart btn btn-light" id="FS1" onclick="Add('#FS1')" data-name="flat Slippers" data-price="299">Add-Cart</a>
+        </div>
+
+        <div class="slippers-card-item">
+          <img
+          src="/Users/tcsmobility/Desktop/trinwo office/shopping/slippersimages/ss5.jpeg"
+            class="slippers-card-image"
+          />
+          <h1 class="slippers-card-name">High heels</h1>
+          <p class="slippers-card-price">Rs 2500/-</p>
+          <a class="add-to-cart btn btn-light" id="HH" onclick="Add('#HH')" data-name="High heels" data-price="2500">Add-Cart</a>
+        </div>
+      </div>
+
+      <div class="d-flex flex-row justify-content-center">
+        <div class="slippers-card-item">
+          <img
+          src="/Users/tcsmobility/Desktop/trinwo office/shopping/slippersimages/ss6.jpeg"
+            class="slippers-card-image"
+          />
+          <h1 class="slippers-card-name">Nike slippers</h1>
+          <p class="slippers-card-price">Rs 2500/-</p>
+          <a class="add-to-cart btn btn-light" id="NS" onclick="Add('#NS')" data-name="Nike slippers" data-price="2500">Add-Cart</a>
+        </div>
+
+        <div class="slippers-card-item">
+          <img
+          src="/Users/tcsmobility/Desktop/trinwo office/shopping/slippersimages/ss7.jpeg"
+            class="slippers-card-image"
+          />
+          <h1 class="slippers-card-name">flite Mens slippers</h1>
+          <p class="slippers-card-price">Rs 499/-</p>
+            <a class="add-to-cart btn btn-light" id="FMS" onclick="Add('#FMS')" data-name="Flite Mens Slippers" data-price="499">Add-Cart</a>
+        </div>
+
+        <div class="slippers-card-item">
+          <img
+          src="/Users/tcsmobility/Desktop/trinwo office/shopping/slippersimages/ss8.jpeg"
+            class="slippers-card-image"
+          />
+          <h1 class="slippers-card-name"> USPA Mens slippers</h1>
+          <p class="slippers-card-price">Rs 1999/-</p>
+            <a class="add-to-cart btn btn-light" id="UMS" onclick="Add('#UMS')" data-name="USPA Mens Slippers" data-price="1999">Add-Cart</a>
+        </div>
+
+        <div class="slippers-card-item">
+          <img
+          src="/Users/tcsmobility/Desktop/trinwo office/shopping/slippersimages/ss9.jpeg"
+            class="slippers-card-image"
+          />
+          <h1 class="slippers-card-name">Nike new slippers</h1>
+          <p class="slippers-card-price">Rs 2999/-</p>
+            <a class="add-to-cart btn btn-light" id="NNS" onclick="Add('#NNS')" data-name="Nike NEW Slippers" data-price="2999">Add-Cart</a>
+        </div>
+
+        <div class="slippers-card-item">
+          <img
+          src="/Users/tcsmobility/Desktop/trinwo office/shopping/slippersimages/ss10.jpeg"
+            class="slippers-card-image"
+          />
+          <h1 class="slippers-card-name">Crocs clogs </h1>
+          <p class="slippers-card-price">Rs 3500/-</p>
+            <a class="add-to-cart btn btn-light" id="CC" onclick="Add('#CC')" data-name="Crocs clogs" data-price="3500">Add-Cart</a>
+        </div>
+      </div>
+    </div>
+    <!-- section-->
+    <div class="wcu-section pt-5 pb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="wcu-section-heading">Why Choose Us?</h1>
+            <p class="wcu-section-description">
+            <b>New-Season Work Wear</b>
+              GIVING YOU THE DOWNLOAD OF THE BEST TRENDS
+            </p>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="wcu-card p-3 mb-3">
+              <img
+                src="/Users/tcsmobility/Desktop/trinwo office/shopping/icons/brand.png"
+                class="wcu-card-image"
+              />
+              <h1 class="wcu-card-title mt-3">BRANDS</h1>
+              <p class="wcu-card-description">
+                Shop E-cart understands its shoppers needs and caters to them with choice of apparel,accessories,cosmetics and footware from over 500 leading indian and international Brands.              </p>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="wcu-card p-3 mb-3">
+              <img
+                src="/Users/tcsmobility/Desktop/trinwo office/shopping/icons/services.png"
+                class="wcu-card-image"
+              />
+              <h1 class="wcu-card-title mt-3">SERVICES </h1>
+              <p class="wcu-card-description">
+              Apart from these must haves for any event,we also support
+              a host of other services like SEO for your event,
+              custom pricing for your orders and this and also this.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="wcu-card p-3 mb-3">
+              <img
+                src="/Users/tcsmobility/Desktop/trinwo office/shopping/icons/bestofferes.png"
+                class="wcu-card-image"
+              />
+              <h1 class="wcu-card-title mt-3">Best Offers</h1>
+
+              <p class="wcu-card-description">
+                 Coupons & Offers upto
+                <span class="offers">50% OFF</span>
+                and Exclusive Promo Codes on All Online Shopping Orders.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Gift-->
+    <div class="thanking-customers-section pt-5 pb-5">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12 col-md-7 d-flex flex-column justify-content-center">
+                    <h1 class="thanking-customers-section-heading">
+                      Thank you for being a valuable customer to us.
+                    </h1>
+                    <p class="thanking-customers-section-description">
+                      We have a surprise gift for you
+                    </p>
+                    <div class="d-md-none">
+                      <img
+                        src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/thanking-customers-section-img.png"
+                        class="thanking-customers-section-img"
+                      />
+                    </div>
+                    <div>
+                      <button class="custom-button">Redeem Gift</button>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-5 d-none d-md-block">
+                    <img
+                      src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/thanking-customers-section-img.png"
+                      class="thanking-customers-section-img"
+                    />
+                  </div>
+                </div>
+              </div>
+
+<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="show-cart table">
+
+        </table>
+        <div>Total price: ₹<span class="total-cart"></span></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Order now</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+</html>

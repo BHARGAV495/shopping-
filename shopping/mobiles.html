@@ -1,0 +1,253 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/Users/tcsmobility/Desktop/trinwo office/shopping/style.css">
+    <script src="/Users/tcsmobility/Desktop/trinwo office/shopping/cart.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBn+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <style media="screen">
+      .jewellery-bottom-section {
+  text-align:center;
+  background-color: #e6f6ff;
+  padding:15px;
+}
+.jewellery-card-item {
+  text-align: center;
+  background-color: white;
+  width:240px;
+  border-radius: 15px;
+  padding: 16px;
+  margin: 15px;
+}
+.jewellery-card-image {
+  height: 200px;
+  width: 200px;
+}
+.jewellery-card-name {
+  color: #616e7c;
+  font-family: "san serif";
+  font-size: 12px;
+  font-weight: bold;
+}
+.jewellery-card-price {
+  color: #323f4b;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 500;
+}
+#{
+margin: 0;
+padding: 0;
+background-color: red;
+}
+.logo {
+width: 100px;
+height: 100px;
+border-radius:50px;
+align-items: flex-start;
+}
+#navItem1 {
+color: #323f4b;
+font-family: "Roboto";
+}
+#navItem2 {
+color: #323f4b;
+font-family: "Roboto";
+}
+#navItem3 {
+color: #323f4b;
+font-family: "Roboto";
+}
+#navItem4 {
+color: #323f4b;
+font-family: "Roboto";
+}
+.home-icon{
+  margin-top: 10px;
+  color: #323f4b;
+  font-family: "Roboto";
+}
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light ">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://www.logolynx.com/images/logolynx/ef/ef540793d81237ad500bef0bbb515920.jpeg"
+            class="logo"
+     />       𝖘𝖍𝖔𝖕 𝖊 𝖈𝖆𝖗𝖙
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-link active" id="navItem1" href="#">
+
+              <span class="sr-only">(current)</span>
+            </a>
+             <a class="home-icon" href="/Users/tcsmobility/Desktop/trinwo office/shopping/index.html">🏘️HOME️</a>
+            <li class="nav-item dropdown">
+           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            categories
+           </a>
+           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+             <li><a class="dropdown-item" href="/Users/tcsmobility/Desktop/trinwo office/shopping/dress.html">Dress</a></li>
+             <li><a class="dropdown-item" href="/Users/tcsmobility/Desktop/trinwo office/shopping/mobiles.html">mobiles</a></li>
+             <li><a class="dropdown-item" href="/Users/tcsmobility/Desktop/trinwo office/shopping/slippers.html">slippers</a></li>
+             <li><a class="dropdown-item" href="/Users/tcsmobility/Desktop/trinwo office/shopping/jewellery.html">Jewellery</a></li>
+              <li><a class="dropdown-item" href="/Users/tcsmobility/Desktop/trinwo office/shopping/kitchen.html">kitchen</a></li>
+           </ul>
+         </li>
+            <a class="nav-link" href="/Users/tcsmobility/Desktop/trinwo office/shopping/login.html" id="navItem4">exit</a>
+            <nav class="navbar navbar-inverse bg-inverse fixed-top bg-faded">
+            <button type="button" class="btn btn-light" data-toggle="modal" data-target="#cart"> 🛒(<span class="total-count"></span>)&nbsp;</button><button onclick="clearCart()" class="clear-cart btn btn-light">Clear Cart</button></div>
+            </nav>
+          </div>
+        </div>
+      </div>
+      </nav>
+      <div class="banner-section-bg-container d-flex justify-content-center flex-column">
+        <div class="text-center">
+          <h1 class="banner-heading ">Get AnyItem At Anytime</h1>
+          <p class="banner-caption ">Happy Shopping</p>
+        </div>
+      </div>
+      
+      <div class="mobile-bottom-section">
+           <div class="d-flex flex-row justify-content-center">
+             <div class="mobile-card-item">
+               <img
+                 src="/Users/tcsmobility/Desktop/trinwo office/shopping/mobileimages/ph1.jpeg"
+                 class="mobile-card-image"
+               />
+               <h1 class="mobile-card-name">i phone 13pro Max</h1>
+               <p class="mobile-card-price">Rs 1,25,000/-</p>
+          <a class="add-to-cart btn btn-light" id="IPPM" onclick="Add('#IPPM')" data-name="i phone13pro Max" data-price="1,25,000">Add-Cart</a>
+             </div>
+
+             <div class="mobile-card-item">
+               <img
+               src="/Users/tcsmobility/Desktop/trinwo office/shopping/mobileimages/ph2.jpeg"
+                 class="mobile-card-image"
+               />
+               <h1 class="mobile-card-name"> galaxy s22 ultra</h1>
+               <p class="mobile-card-price">Rs 85,000/-</p>
+                 <a class="add-to-cart btn btn-light" id="GSU" onclick="Add('#GSU')" data-name="GALAXY s22 ultra" data-price="85,000">Add-Cart</a>
+             </div>
+
+             <div class="mobile-card-item">
+               <img
+               src="/Users/tcsmobility/Desktop/trinwo office/shopping/mobileimages/ph3.jpeg"
+                 class="mobile-card-image"
+               />
+               <h1 class="mobile-card-name">vivo v21</h1>
+               <p class="mobile-card-price">Rs 30,000/-</p>
+              <a class="add-to-cart btn btn-light" id="VV21" onclick="Add('#VV21')" data-name="vivo v21" data-price="30,000">Add-Cart</a>
+             </div>
+
+             <div class="mobile-card-item">
+               <img
+               src="/Users/tcsmobility/Desktop/trinwo office/shopping/mobileimages/ph4.jpeg"
+                 class="mobile-card-image"
+               />
+               <h1 class="mobile-card-name">Realme x12</h1>
+               <p class="mobile-card-price">Rs 9,999/-</p>
+                 <a class="add-to-cart btn btn-light" id="RX12" onclick="Add('#RX12')" data-name="Realme x12" data-price="9,999">Add-Cart</a>
+             </div>
+
+             <div class="mobile-card-item">
+               <img
+               src="/Users/tcsmobility/Desktop/trinwo office/shopping/mobileimages/ph5.jpeg"
+                 class="mobile-card-image"
+               />
+               <h1 class="mobile-card-name">oneplus 10 pro </h1>
+               <p class="mobile-card-price">Rs 80,000/-</p>
+                 <a class="add-to-cart btn btn-light" id="O10P" onclick="Add('#O10P')" data-name="oneplus 10pro" data-price="80,000">Add-Cart</a>
+             </div>
+           </div>
+
+           <div class="d-flex flex-row justify-content-center">
+             <div class="mobile-card-item">
+               <img
+               src="/Users/tcsmobility/Desktop/trinwo office/shopping/mobileimages/ph6.jpeg"
+                 class="mobile-card-image"
+               />
+               <h1 class="mobile-card-name">iqoo z6</h1>
+               <p class="mobile-card-price">Rs 27,999/-</p>
+            <a class="add-to-cart btn btn-light" id="IZ6" onclick="Add('#IZ6')" data-name="iqoo z6" data-price="27,999">Add-Cart</a>
+             </div>
+
+             <div class="mobile-card-item">
+               <img
+               src="/Users/tcsmobility/Desktop/trinwo office/shopping/mobileimages/ph7.jpeg"
+                 class="mobile-card-image"
+               />
+               <h1 class="mobile-card-name">Nokia z1</h1>
+               <p class="mobile-card-price">Rs 18,000/-</p>
+                 <a class="add-to-cart btn btn-light" id="NZ1" onclick="Add('#NZ1')" data-name="Nokia z1" data-price="18,000">Add-Cart</a>
+             </div>
+
+             <div class="mobile-card-item">
+               <img
+               src="/Users/tcsmobility/Desktop/trinwo office/shopping/mobileimages/ph8.jpeg"
+                 class="mobile-card-image"
+               />
+               <h1 class="mobile-card-name">gionee </h1>
+               <p class="mobile-card-price">Rs 22,000/-</p>
+                 <a class="add-to-cart btn btn-light" id="G" onclick="Add('#G')" data-name="gionee" data-price="22,000">Add-Cart</a>
+             </div>
+
+             <div class="mobile-card-item">
+               <img
+               src="/Users/tcsmobility/Desktop/trinwo office/shopping/mobileimages/ph9.jpeg"
+                 class="mobile-card-image"
+               />
+               <h1 class="mobile-card-name">oppo</h1>
+               <p class="mobile-card-price">Rs 7,500/-</p>
+                <a class="add-to-cart btn btn-light" id="O" onclick="Add('#O')" data-name="oppo" data-price="7,500">Add-Cart</a>
+             </div>
+
+             <div class="mobile-card-item">
+               <img
+               src="/Users/tcsmobility/Desktop/trinwo office/shopping/mobileimages/ph10.jpeg"
+                 class="mobile-card-image"
+               />
+               <h1 class="mobile-card-name">redmi 12</h1>
+               <p class="mobile-card-price">Rs 35,000/-</p>
+                 <a class="add-to-cart btn btn-light" id="R12" onclick="Add('#R12')" data-name="redmi 12" data-price="35,000">Add-Cart</a>
+             </div>
+           </div>
+         </div>
+
+        <!-- section-->
+     <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+       <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <table class="show-cart table">
+
+      </table>
+      <div>Total price: ₹<span class="total-cart"></span></div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-primary">Order now</button>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+  </body>
+</html>
